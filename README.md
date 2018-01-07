@@ -1,6 +1,9 @@
 # wifi-qrcode-generator
 Simple CLI application to generate QR Codes for wifi-connections.
 
+![build status](https://travis-ci.org/dev-jan/wifi-qrcode-generator.svg?branch=master)
+![MIT license](https://img.shields.io/github/license/dev-jan/wifi-qrcode-generator.svg)
+
 ![qr code](example.png)
 
 Do you want to create a QR code for your wifi so you don't have to type in your
