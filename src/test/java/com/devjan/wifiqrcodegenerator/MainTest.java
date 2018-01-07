@@ -6,7 +6,7 @@ public class MainTest {
 	@Test
 	public void test_main() {
 		// Arrange
-		String[] args = new String[1];
+		String[] args = new String[0];
 		
 		// Act
 		Main.main(args);

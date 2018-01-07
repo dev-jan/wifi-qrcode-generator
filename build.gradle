@@ -8,5 +8,8 @@ repositories {
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.13'
 
-    testCompile 'junit:junit:3.8.2'
+    // cli library
+    compile 'info.picocli:picocli:2.2.1'
+
+    testCompile 'junit:junit:4.12'
 }
