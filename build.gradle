@@ -23,3 +23,9 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 }
+
+run {
+    if(project.hasProperty('args')){
+        args project.args.split('\\s+')
+    }
+}
