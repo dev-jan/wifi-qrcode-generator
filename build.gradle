@@ -1,9 +1,12 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'application'
 
 repositories {
     jcenter()
 }
+
+mainClassName = 'com.devjan.wifiqrcodegenerator.Main'
 
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.13'
