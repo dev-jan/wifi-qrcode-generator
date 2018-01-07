@@ -11,8 +11,15 @@ mainClassName = 'com.devjan.wifiqrcodegenerator.Main'
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.13'
 
+    // helpers
+    compile 'org.apache.commons:commons-lang3:3.7'
+
     // cli library
     compile 'info.picocli:picocli:2.2.1'
+
+    // qr code library
+    compile 'com.google.zxing:core:3.3.1'
+    compile 'com.google.zxing:javase:3.3.1'
 
     testCompile 'junit:junit:4.12'
 }
