@@ -28,7 +28,7 @@ public class WifiQrCodeGeneratorTest {
   public void test_getPayloadString_wep() {
     // Arrange
     WifiQrCodeGenerator generator = new WifiQrCodeGenerator();
-    generator.withAuthenticationMode(AuthenticationMode.WEP)
+    generator.withAuthenticationMode("WEP")
              .withSsid("unsecureNetwork")
              .withPassword("asdf");
 
@@ -52,5 +52,19 @@ public class WifiQrCodeGeneratorTest {
     // Assert
     assertEquals("WIFI:T:NOPASS;S:openNetwork;P:;;", qrPayload);
   }
-  
+
+  @Test
+  public void test_toString() {
+    // Arrange
+    WifiQrCodeGenerator generator = new WifiQrCodeGenerator();
+    generator.withAuthenticationMode(AuthenticationMode.NOPASS)
+             .withSsid("openNetwork");
+
+    // Act
+    String result = generator.toString();
+
+    // Assert
+    assertTrue("toString() should contain the network name", result.contains("openNetwork"));
+  }
+
 }
