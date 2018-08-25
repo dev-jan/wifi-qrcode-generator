@@ -2,7 +2,8 @@ package com.devjan.wifiqrcodegenerator;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Hashtable;
+import java.util.EnumMap;
+import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -45,7 +46,7 @@ public class WifiQrCodeGenerator {
 
   public void generateQrCodePicture() throws WriterException, IOException {
     QRCodeWriter qrCodeWriter = new QRCodeWriter();
-    Hashtable<EncodeHintType, ErrorCorrectionLevel> hints = new Hashtable<EncodeHintType, ErrorCorrectionLevel>();
+    Map<EncodeHintType, ErrorCorrectionLevel> hints = new EnumMap<>(EncodeHintType.class);
     hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
 
     BitMatrix bitMatrix = qrCodeWriter.encode(getPaylodString(), BarcodeFormat.QR_CODE, QR_CODE_SIZE, QR_CODE_SIZE, hints);

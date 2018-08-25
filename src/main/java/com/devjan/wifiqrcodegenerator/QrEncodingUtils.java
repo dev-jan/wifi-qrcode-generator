@@ -11,6 +11,10 @@ import java.util.List;
 public class QrEncodingUtils {
   private static final String ESCAPE_CHAR = "\\";
 
+  private QrEncodingUtils() {
+    // this utils class only has static methods
+  }
+
   private static final List<String> charsToEscape = new ArrayList<>();
   static {
     charsToEscape.add("\\");
@@ -26,7 +30,7 @@ public class QrEncodingUtils {
    * @return encoded output string
    */
   public static String encodeString(String input) {
-    String output = new String(input);
+    String output = input;
 
     for (String c : charsToEscape) {
       output = output.replace(c, ESCAPE_CHAR + c);
