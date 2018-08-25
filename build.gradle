@@ -1,6 +1,11 @@
+plugins {
+  id 'org.sonarqube' version '2.6.2'
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
+apply plugin: 'jacoco'
 
 repositories {
     jcenter()
@@ -22,6 +27,13 @@ dependencies {
     compile 'com.google.zxing:javase:3.3.1'
 
     testCompile 'junit:junit:4.12'
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        csv.enabled false
+    }
 }
 
 run {
