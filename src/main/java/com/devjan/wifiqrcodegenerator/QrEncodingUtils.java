@@ -1,6 +1,6 @@
 package com.devjan.wifiqrcodegenerator;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -10,18 +10,10 @@ import java.util.List;
  */
 public class QrEncodingUtils {
   private static final String ESCAPE_CHAR = "\\";
+  private static final List<String> CHARS_TO_ESCAPE = Arrays.asList(ESCAPE_CHAR, ",", ";", "\"", ":");
 
   private QrEncodingUtils() {
     // this utils class only has static methods
-  }
-
-  private static final List<String> charsToEscape = new ArrayList<>();
-  static {
-    charsToEscape.add("\\");
-    charsToEscape.add(",");
-    charsToEscape.add(";");
-    charsToEscape.add("\"");
-    charsToEscape.add(":");
   }
 
   /**
@@ -30,9 +22,12 @@ public class QrEncodingUtils {
    * @return encoded output string
    */
   public static String encodeString(String input) {
+    if (input == null) {
+      return null;
+    }
     String output = input;
 
-    for (String c : charsToEscape) {
+    for (String c : CHARS_TO_ESCAPE) {
       output = output.replace(c, ESCAPE_CHAR + c);
     }
     return output;

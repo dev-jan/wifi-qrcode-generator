@@ -1,4 +1,5 @@
 package com.devjan.wifiqrcodegenerator;
+
 /**
  * Represents possible wifi authentication modes that are supported by the wifi QR code
  *
@@ -7,9 +8,9 @@ package com.devjan.wifiqrcodegenerator;
 public enum AuthenticationMode {
   WPA("WPA"), WEP("WEP"), NOPASS("nopass");
 
-  private String key;
+  private final String key;
 
-  private AuthenticationMode(String key) {
+  AuthenticationMode(String key) {
     this.key = key;
   }
 

@@ -36,8 +36,8 @@ Run...
 Example command:
 ```
 $ ./build/install/wifi-qrcode-generator/bin/wifi-qrcode-generator --ssid "SomeNetwork" -p "asdf" -a WPA example.png
-Generating QR code...
-QR code generated. Output: example.png
+[+] Generating QR code...
+[+] QR code generated. Output: example.png
 ```
 
 Now you can print out the QR code and let others connect to your wifi without typing your 20-digit password into there phones :smiley:

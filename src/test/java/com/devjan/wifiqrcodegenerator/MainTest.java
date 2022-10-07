@@ -11,7 +11,7 @@ public class MainTest {
   @Test
   public void test_main() {
     // Arrange
-    String[] args = new String[0];
+    String[] args = {"--ssid=test", "example.png"};
 
     // Act
     Main.main(args);
