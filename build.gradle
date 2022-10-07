@@ -14,19 +14,19 @@ repositories {
 mainClassName = 'com.devjan.wifiqrcodegenerator.Main'
 
 dependencies {
-    compile 'org.slf4j:slf4j-api:1.7.13'
+    implementation 'org.slf4j:slf4j-api:2.0.3'
 
     // helpers
-    compile 'org.apache.commons:commons-lang3:3.7'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
 
     // cli library
-    compile 'info.picocli:picocli:2.2.1'
+    implementation 'info.picocli:picocli:4.6.3'
 
     // qr code library
-    compile 'com.google.zxing:core:3.3.1'
-    compile 'com.google.zxing:javase:3.3.1'
+    implementation 'com.google.zxing:core:3.5.0'
+    implementation 'com.google.zxing:javase:3.5.0'
 
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.2'
 }
 
 jacocoTestReport {
