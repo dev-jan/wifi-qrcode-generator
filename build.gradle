@@ -1,17 +1,17 @@
 plugins {
-  id 'org.sonarqube' version '2.6.2'
+    id 'application'
+    id 'java'
+    id 'jacoco'
+    id 'org.sonarqube' version '2.6.2'
 }
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'application'
-apply plugin: 'jacoco'
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
-mainClassName = 'com.devjan.wifiqrcodegenerator.Main'
+application {
+    mainClass = 'com.devjan.wifiqrcodegenerator.Main'
+}
 
 dependencies {
     implementation 'org.slf4j:slf4j-api:2.0.3'
@@ -31,8 +31,8 @@ dependencies {
 
 jacocoTestReport {
     reports {
-        xml.enabled true
-        csv.enabled false
+        xml.required = true
+        csv.required = false
     }
 }
 
